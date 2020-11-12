@@ -17,7 +17,7 @@ commands:
     steps:
       - checkout
       - run:
-          name: apt update
+          name: yum update
           command: |
             sudo yum update
             sudo yum install -q -y rsync
@@ -54,5 +54,4 @@ workflows:
   run-nginx:
     jobs:
       - circleci-job
-
 
